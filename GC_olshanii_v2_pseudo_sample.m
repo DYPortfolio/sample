@@ -1,5 +1,5 @@
 function GC_olshanii_v2(varargin)
-%Dmitry Yampolsky
+%Copyright Dmitry Yampolsky
 %October 2016
 
 %Version 2 uses epsilon to define mass distribution and doesnt need wrapper
