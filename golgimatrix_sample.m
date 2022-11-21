@@ -1,5 +1,6 @@
 
 function irishmatrixwin12
+%Copyright, Dmitry Yampolsky 2022
 %golgimatrix project
 
 %dependencies:
