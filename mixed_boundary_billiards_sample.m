@@ -1,5 +1,5 @@
 function mixed_boundary_billiards_2022(varargin)
-%Dmitry Yampolsky 2022
+%Copyright Dmitry Yampolsky 2022
 
 text_data_out_switch=false;
 saveworkspace_switch=true;
