@@ -63,24 +63,17 @@ bmap2 = zeros(histres,histres);
 
 trans=@(c,r,x) (x-c)/norm((x-c)) .* (2 * r -sum((x-c).^2).^.5) ;
 
-%trans=@(c,r,x) (c  +  ((   (r  )   ^2)/sum((   (x   - c ).^2 )))  *  ( x - c));
-
-%trans=@(c,r,x) (c  +  ((   (r )   ^2)/sum((   (x  -c).^2 )))  *  ( x -c));
-
 tic
 for Rctrind = 1:length(Rctrarray)
     Rctr = Rctrarray(Rctrind);
     for Cctrind = 1:length(Cctrarray)
         Cctr = Cctrarray(Cctrind);
-        %
+       
         center2 =[Cctr, 0];
         radius2 = Rctr;
-        %         xys = [xctr yctr];
-        
-        
+
         rmap = 0;
         bmap = 0;
-        %
         
         if exist('circoverlayplot0')
             delete(circoverlayplot0)
@@ -109,12 +102,6 @@ for Rctrind = 1:length(Rctrarray)
                     
                     xytmp = trans(c,R, xys(ictr,:) );
                     
-
-%trans=@(c,r,x) (c  +  ((r^2)/sum((   x  -c).^2))  *  ( x -c));
-
-
-%                     xytmp = center1 + ((radius1^2)/sum((xys(ictr,:)-center1).^2))*(xys(ictr,:)-center1);
-                    
                     xytmp(isnan(xytmp))=0;
                     xys2(end+1,:) = xytmp;
                     
@@ -129,25 +116,17 @@ for Rctrind = 1:length(Rctrarray)
                        % xyhisttmp2(xyhistxy(1),xyhistxy(2)) =  xyhisttmp2(xyhistxy(1),xyhistxy(2)) +1;
                     catch me
                         disp('1!')
-                        
                       %  return
                     end
                     
                     c = center2;
                     R=radius2;
 
-
-                 %   xytmp= c  +  ((R^2)/sum((   xys(ictr,:)   -c).^2))  *  ( xys(ictr,:) -c);
-                 %   xytmp2= c  +  ((R^2)/sum((   xytmp        -c).^2))  *  ( xytmp       -c);
-
                     xytmp2 = trans(c,R,xytmp);
-
-%                     xytmp2 = center2 + ((radius2^2)/sum((xytmp-center2).^2))*(xytmp-center2);
                     
                     
                     xytmp2(isnan(xytmp2))=0;
                     xys(end+1,:) = xytmp2;
-                    %
                     %                plot(ax2,xytmp2(1,1)*(histres/2)/histarea + histres/2,...
                     %  xytmp2(1,2)*(histres/2)/histarea + histres/2,'.g');
                     %
@@ -160,8 +139,6 @@ for Rctrind = 1:length(Rctrarray)
                         disp('2!');
                         % return
                     end
-                    
-                    
                 end
                 %
                 %
@@ -215,15 +192,12 @@ toc
 set (fig2, 'WindowButtonMotionFcn', @mouseMove);
 
     function f_out = fXYtohistT(f_in)
-      
         
         f_out = ...        
         (ceil(...
     histres.*...
     ((((f_in.*(abs(f_in)<=histarea) + histarea.*(abs(f_in)>histarea))...
     ./histarea) + 1)./2)));
-
-        
     end
 
     function moseClick(object, eventdata)
