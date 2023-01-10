@@ -1,7 +1,13 @@
 
-function irishmatrixwin12
+function golgimatrixwin12
 %Copyright, Dmitry Yampolsky 2022
 %golgimatrix project
+
+%code sample
+
+%Kai M. Bracey, Kung-Hsien Ho, Dmitry Yampolsky, Guogiang Gu, Irina Kaverina, William R. Holmes,
+%Microtubules Regulate Localization and Availability of Insulin Granules in Pancreatic Beta Cells,
+%Biophysical Journal, Volume 118, Issue 1, 2020, Pages 193-206
 
 %dependencies:
 
