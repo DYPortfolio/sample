@@ -2,6 +2,10 @@ function GC_olshanii_v2(varargin)
 %Copyright Dmitry Yampolsky
 %October 2016
 
+%Creating entanglement using integrals of motion
+%Maxim Olshanii, Thibault Scoquart, Dmitry Yampolsky, Vanja Dunjko, and Steven Glenn Jackson
+%Phys. Rev. A 97, 013630 – Published 26 January 2018
+
 %Version 2 uses epsilon to define mass distribution and doesnt need wrapper
 %to exhaust this variable
 
