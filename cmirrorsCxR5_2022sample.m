@@ -1,6 +1,10 @@
 function cmirrorsCxR2
 clear
 
+%Maxim Olshanii, Yuri Styrkas, Dmitry Yampolsky, Vanja Dunjko, Steven G. Jackson,
+%Four-dimensional reflection groups and electrostatics,
+%Annals of Physics, Volume 421, 2020
+
 niterations = 1000;
 radius1=1;
 
