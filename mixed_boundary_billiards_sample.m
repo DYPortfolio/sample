@@ -1,6 +1,11 @@
 function mixed_boundary_billiards_2022(varargin)
 %Copyright Dmitry Yampolsky 2022
 
+%Quantum Chirikov criterion: Two particles in a box as a toy model for a quantum gas
+%Dmitry Yampolsky, N. L. Harshman, Vanja Dunjko, Zaijong Hwang, Maxim Olshanii
+%SciPost Phys. 12, 035 (2022) · published 24 January 2022
+
+
 text_data_out_switch=false;
 saveworkspace_switch=true;
 savedata_switch = false;
@@ -64,7 +69,6 @@ mbb_main();
             indexed_ijHij_int2(indexN) =  ijHij_int(kctr_i,kctr_j) ;
         end% ij_ctr
 
-
         H_selection = (kijref(:,1).^2 + ((1./angle_alph_side).^2) .*(kijref(:,2).^2))...
             <  (max((1./angle_alph_side.^2).*(ks(end).^2),   ks(end).^2));
 
@@ -126,16 +130,12 @@ mbb_main();
         h2_eig = h2_eig(:,sorted_eigInds);
 
         output();
-
         
         function output()
             %...
         end
         
         clear%for multiple a/b's
-
-
-
 
         function overlapF1_out = overlapF1(kappaI1_ind, kappaII1_ind, kappaI2_ind, kappaII2_ind,kappaI1_val, kappaII1_val, kappaI2_val, kappaII2_val)
             %function input are indexes not values, overlapF2 refers to kijref_ind_sorted, returns values
