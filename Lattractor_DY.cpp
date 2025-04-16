@@ -1,13 +1,13 @@
 //
 //  Lattractor.cpp
-//  opcltest
 //
 //  Created by Dmitry Yamolsky on 8/12/22.
 //SDL visual demo for:
 //Report on "Solving ordinary differential equations on GPUs"
 //by Karsten Ahnert, Denis Demidov, and Mario Mulansky
-//KarstenDemidovMulansky2014.key
+//see KarstenDemidovMulansky2014.key
 
+//uses 
 
 #include <iostream>
 #include <vector>
@@ -18,7 +18,6 @@
 #include "Lattractor.hpp"
 #include "runge_kutta4.hpp"
 #include "sawki_settings.h"
-
 
 #define CL_HPP_TARGET_OPENCL_VERSION 120
 #define CL_HPP_MINIMUM_OPENCL_VERSION 120
@@ -80,7 +79,6 @@ struct sys_func
 };
 
 void lattractor() {
-    
     
     using std::chrono::high_resolution_clock;
     using std::chrono::duration;
