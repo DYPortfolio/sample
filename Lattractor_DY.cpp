@@ -6,6 +6,7 @@
 //SDL visual demo for:
 //Report on "Solving ordinary differential equations on GPUs"
 //by Karsten Ahnert, Denis Demidov, and Mario Mulansky
+//KarstenDemidovMulansky2014.key
 
 
 #include <iostream>
